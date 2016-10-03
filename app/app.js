@@ -13,14 +13,10 @@ app.on('ready', () => {
 
   const workAreaSize = electron.screen.getPrimaryDisplay().workAreaSize;
 
-  win = new BrowserWindow({width: workAreaSize.width, height: workAreaSize.height, minWidth: 400, minHeight: 400, show: false});
+  win = new BrowserWindow({width: workAreaSize.width, height: workAreaSize.height, minWidth: 400, minHeight: 400, show: true});
 
   win.on('closed', () => {
     win = null
-  });
-
-  win.once('ready-to-show', () => {
-    win.show()
   });
 
   win.loadURL(`file://${__dirname}/static/index.html`);

@@ -1,8 +1,5 @@
 'use strict';
 
 require('./tasks/start');
-const gulp = require('gulp');
-
-gulp.task('default', ['start'], () => {
-
-});
+require('./tasks/build');
+require('gulp').task('default', ['start'], () => {});

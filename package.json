@@ -4,7 +4,8 @@
   "description": "Electron boilerplate",
   "main": "app/app.js",
   "scripts": {
-    "start": "gulp start"
+    "start": "gulp start",
+    "build": "gulp build"
   },
   "keywords": [
     "boilerplate",
@@ -23,6 +24,7 @@
     "url": "https://github.com/pedro-lucas/electron-boilerplate.git"
   },
   "dependencies": {
+    "electron-packager": "^8.1.0",
     "jquery": "^3.1.0",
     "octicons": "^4.2.0",
     "underscore": "^1.8.3"
