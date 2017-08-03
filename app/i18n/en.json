@@ -1,4 +1,6 @@
 {
-  "Hello world!!": "Hello world!!",
+  "Hello world!! %s": "Hello world!! %s",
+  "Try again": "Try again",
+  "This message will dismiss!!": "This message will dismiss!!",
   "Action": "Action"
 }

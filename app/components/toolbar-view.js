@@ -15,13 +15,13 @@ module.exports = class ToolbarView extends ComponentView {
   }
 
   showNotification(evt) {
-    NotificationView.info('Hello world!! Info!!', {dismissable: true});
-    NotificationView.error('Hello world!! Error!!', {dismissable: true});
-    NotificationView.success('Hello world!! Success!!', {dismissable: true});
-    NotificationView.warning('Hello world!! Warning!!', {dismissable: true});
-    let notify = NotificationView.retry('Hello world!! Retry!!', "Try again", {dismissable: true, onRetry: () => {
+    NotificationView.info(i18n.__("Hello world!! %s", "NotificationView.info"), {dismissable: true});
+    NotificationView.error(i18n.__("Hello world!! %s", "NotificationView.error"), {dismissable: true});
+    NotificationView.success(i18n.__("Hello world!! %s", "NotificationView.success"), {dismissable: true});
+    NotificationView.warning(i18n.__("Hello world!! %s", "NotificationView.warning"), {dismissable: true});
+    let notify = NotificationView.retry(i18n.__("Hello world!! %s", "NotificationView.retry"), i18n.__("Try again"), {dismissable: true, onRetry: () => {
       notify.dismiss();
-      NotificationView.info('Try again!! this message will dismiss!!');
+      NotificationView.info(i18n.__('This message will dismiss!!'));
     }});
   }
 
