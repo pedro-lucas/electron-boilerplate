@@ -1,21 +1,22 @@
-'use strict';
-
 const Controller = require('./controller');
-const NotificationView = require('../library/notification-view');
 const ToolbarView = require('../components/toolbar-view');
-const util = require('../library/util');
 const $ = require("jquery");
 
 class MainController extends Controller {
 
   constructor() {
-    super($('.main'));
+    super();
     this.initialize();
   }
 
   initialize() {
     this.toolbarView = new ToolbarView();
     this.addComponent(this.toolbarView);
+  }
+
+  get view() {
+    if(!this._view) this._view = $('.main');
+    return this._view;
   }
 
 }

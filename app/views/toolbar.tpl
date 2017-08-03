@@ -1,1 +1,1 @@
-<button class="menu">Action</button>
+<button class="menu"><%=action%></button>

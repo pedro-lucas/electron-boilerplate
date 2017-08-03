@@ -1,7 +1,8 @@
-'use strict';
+require("./locale");
 
 const electron = require('electron');
 const {app, BrowserWindow} = electron;
+const path = require('path');
 
 let win;
 
